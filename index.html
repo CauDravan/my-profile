@@ -6,350 +6,254 @@
 
     <title>CD ♡</title>
 
+    <!-- Website Icon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <header class="navbar">
+    <!-- ==================== NAVBAR ==================== -->
 
+    <header class="navbar">
         <a href="index.html" class="logo">
-            CD<span>♡</span>
+            CD <span>♡</span>
         </a>
 
         <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="art.html">Art</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <a href="projects.html">
+                <span class="nav-number">01</span>
+                Projects
+            </a>
 
+            <a href="art.html">
+                <span class="nav-number">02</span>
+                Art
+            </a>
+        </nav>
     </header>
 
 
     <main>
 
-        <!-- Hero -->
+        <!-- ==================== HERO ==================== -->
+
         <section class="hero">
+
+            <!-- Decorations -->
+            <span class="decoration decoration-1">✦</span>
+            <span class="decoration decoration-2">♡</span>
+            <span class="decoration decoration-3">·</span>
 
             <div class="hero-content">
 
-                <img
-                    src="assets/avatar.png"
-                    alt="CD avatar"
-                    class="avatar"
-                >
+                <div class="avatar-wrapper">
+                    <div class="avatar-bg"></div>
+
+                    <img
+                        src="assets/avatar.png"
+                        alt="CD avatar"
+                        class="avatar"
+                    >
+                </div>
 
                 <p class="hero-greeting">
-                    hai, I'm <span>CD</span> ♡
+                    hai, I'm <strong>CD</strong> ♡
                 </p>
 
                 <h1>
-                    Game Developer<br>
-                    & Artist
+                    Game Developer
+                    <br>
+                    <span>& Artist</span>
                 </h1>
 
                 <p class="hero-description">
                     I like doing everything related to video games.
                 </p>
 
-                <a href="projects.html" class="button">
-                    View my projects
-                    <span>→</span>
+                <a href="projects.html" class="main-button">
+                    <span>EXPLORE PROJECTS</span>
+                    <span class="button-arrow">→</span>
                 </a>
 
             </div>
 
-            <div class="hero-decoration">
-                <span>✦</span>
-                <span>♡</span>
-                <span>✦</span>
-            </div>
-
         </section>
 
 
-        <!-- About -->
-        <section id="about" class="section about">
+        <!-- ==================== PROJECTS ==================== -->
 
-            <div class="section-heading">
-                <span>01</span>
-                <p>ABOUT ME</p>
+        <section class="feature-section pink-section">
+
+            <div class="section-number">
+                01
             </div>
 
-            <div class="about-layout">
+            <div class="section-content">
+
+                <p class="section-label">
+                    WHAT I MAKE
+                </p>
 
                 <h2>
-                    A little bit<br>
-                    about me.
+                    Projects
                 </h2>
 
-                <div class="about-text">
+                <p class="section-description">
+                    Games, experiments and things
+                    I've worked on.
+                </p>
 
-                    <p>
-                        Hi! I'm CD, a student who enjoys making
-                        games and drawing in my free time.
-                    </p>
+                <a href="projects.html" class="outline-button">
+                    VIEW PROJECTS
+                    <span>↗</span>
+                </a>
 
-                    <p>
-                        I'm interested in game development,
-                        programming, character design and
-                        experimenting with different ideas.
-                    </p>
+            </div>
 
-                    <p>
-                        Most of my projects start with a simple
-                        thought of <em>"what if I tried this?"</em>
-                    </p>
-
-                </div>
-
+            <div class="section-decoration">
+                ✦
             </div>
 
         </section>
 
 
-        <!-- What I Do -->
-        <section class="section interests">
+        <!-- ==================== ART ==================== -->
 
-            <div class="section-heading">
-                <span>02</span>
-                <p>WHAT I DO</p>
+        <section class="feature-section white-section">
+
+            <div class="section-number">
+                02
             </div>
 
-            <div class="interest-list">
+            <div class="section-content">
 
-                <div class="interest-item">
+                <p class="section-label">
+                    CREATIVE SIDE
+                </p>
 
-                    <span class="interest-number">01</span>
+                <h2>
+                    Art
+                </h2>
 
-                    <div>
-                        <h3>Game Development</h3>
-                        <p>
-                            Making games and experimenting
-                            with gameplay ideas.
-                        </p>
-                    </div>
+                <p class="section-description">
+                    Drawings, illustrations and
+                    little experiments.
+                </p>
 
-                    <span class="interest-arrow">↗</span>
+                <a href="art.html" class="outline-button pink-button">
+                    VIEW ART
+                    <span>↗</span>
+                </a>
 
-                </div>
+            </div>
 
-
-                <div class="interest-item">
-
-                    <span class="interest-number">02</span>
-
-                    <div>
-                        <h3>Programming</h3>
-                        <p>
-                            Writing code and building things
-                            that hopefully work.
-                        </p>
-                    </div>
-
-                    <span class="interest-arrow">↗</span>
-
-                </div>
-
-
-                <div class="interest-item">
-
-                    <span class="interest-number">03</span>
-
-                    <div>
-                        <h3>Drawing</h3>
-                        <p>
-                            Characters, concepts and other
-                            little things.
-                        </p>
-                    </div>
-
-                    <span class="interest-arrow">↗</span>
-
-                </div>
-
+            <div class="section-decoration">
+                ♡
             </div>
 
         </section>
 
 
-        <!-- Explore -->
-        <section class="section links">
+        <!-- ==================== SOCIAL ==================== -->
 
-            <div class="section-heading">
+        <section class="social-section">
+
+            <div class="social-title">
                 <span>03</span>
-                <p>EXPLORE</p>
-            </div>
 
-            <div class="link-grid">
+                <div>
+                    <p class="section-label">
+                        FIND ME
+                    </p>
 
-                <a href="projects.html" class="big-link">
-
-                    <div>
-                        <span class="link-label">
-                            01 / WORK
-                        </span>
-
-                        <h3>Projects</h3>
-
-                        <p>
-                            Games, websites and other
-                            things I've made.
-                        </p>
-                    </div>
-
-                    <span class="big-arrow">↗</span>
-
-                </a>
-
-
-                <a href="art.html" class="big-link">
-
-                    <div>
-                        <span class="link-label">
-                            02 / DRAWINGS
-                        </span>
-
-                        <h3>Art</h3>
-
-                        <p>
-                            A collection of things
-                            I've drawn.
-                        </p>
-                    </div>
-
-                    <span class="big-arrow">↗</span>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- Contact -->
-        <section id="contact" class="section contact">
-
-            <div class="section-heading">
-                <span>04</span>
-                <p>CONTACT</p>
-            </div>
-
-            <div class="contact-content">
-
-                <h2>
-                    Let's say<br>
-                    hi. <span>♡</span>
-                </h2>
-
-
-                <div class="contact-links">
-
-                    <!-- GitHub -->
-                    <a
-                        href="https://github.com/CauDravan"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-
-                        <span class="contact-name">
-
-                            <svg
-                                class="icon"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08
-                                    3.29 9.39 7.86 10.91.58.11.79-.25.79-.56
-                                    0-.27-.01-1.17-.01-2.13-3.2.7-3.88-1.36
-                                    -3.88-1.36-.53-1.33-1.28-1.69-1.28-1.69
-                                    -1.04-.71.08-.7.08-.7 1.15.08 1.76
-                                    1.18 1.76 1.18 1.02 1.75 2.68 1.25
-                                    3.34.96.1-.74.4-1.25.73-1.54-2.55-.29
-                                    -5.23-1.28-5.23-5.69 0-1.26.45-2.29
-                                    1.18-3.1-.12-.29-.51-1.46.11-3.05
-                                    0 0 .96-.31 3.15 1.18a10.93 10.93
-                                    0 0 1 5.74 0c2.19-1.49 3.15-1.18
-                                    3.15-1.18.62 1.59.23 2.76.11 3.05
-                                    .73.81 1.18 1.84 1.18 3.1 0 4.42
-                                    -2.69 5.4-5.25 5.68.41.35.78 1.04.78
-                                    2.1 0 1.52-.01 2.74-.01 3.11
-                                    0 .31.21.68.8.56C20.21 21.39
-                                    23.5 17.08 23.5 12 23.5
-                                    18.35 18.35 23.5 12 .5Z"
-                                />
-                            </svg>
-
-                            GitHub
-
-                        </span>
-
-                        <span>↗</span>
-
-                    </a>
-
-
-                    <!-- YouTube -->
-                    <a
-                        href="https://www.youtube.com/@caudravan"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-
-                        <span class="contact-name">
-
-                            <svg
-                                class="icon"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M23.5 6.2a3 3 0 0 0-2.1-2.1
-                                    C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6
-                                    A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0
-                                    0 12a31.5 31.5 0 0 0 .5 5.8
-                                    3 3 0 0 0 2.1 2.1c1.9.6 9.4.6
-                                    9.4.6s7.5 0 9.4-.6a3 3 0 0 0
-                                    2.1-2.1A31.5 31.5 0 0 0 24 12
-                                    a31.5 31.5 0 0 0-.5-5.8ZM9.6
-                                    15.5v-7l6 3.5-6 3.5Z"
-                                />
-                            </svg>
-
-                            YouTube
-
-                        </span>
-
-                        <span>↗</span>
-
-                    </a>
-
+                    <h2>
+                        Around the internet
+                    </h2>
                 </div>
+            </div>
+
+
+            <div class="social-links">
+
+                <!-- GitHub -->
+                <a
+                    href="https://github.com/CauDravan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-card"
+                >
+
+                    <div class="social-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.13c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.95.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.67.41.35.78 1.04.78 2.1v3.11c0 .3.21.65.79.54A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+                        </svg>
+                    </div>
+
+                    <div class="social-info">
+                        <span class="social-number">03 / A</span>
+                        <h3>GitHub</h3>
+                        <p>@CauDravan</p>
+                    </div>
+
+                    <span class="social-arrow">↗</span>
+
+                </a>
+
+
+                <!-- YouTube -->
+                <a
+                    href="https://www.youtube.com/@caudravan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-card"
+                >
+
+                    <div class="social-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.39.58A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.86.58 9.39.58 9.39.58s7.53 0 9.39-.58a3 3 0 0 0 2.11-2.12A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8ZM9.6 15.5v-7l6.2 3.5-6.2 3.5Z"/>
+                        </svg>
+                    </div>
+
+                    <div class="social-info">
+                        <span class="social-number">03 / B</span>
+                        <h3>YouTube</h3>
+                        <p>@caudravan</p>
+                    </div>
+
+                    <span class="social-arrow">↗</span>
+
+                </a>
 
             </div>
 
         </section>
+
+
+        <!-- ==================== FOOTER ==================== -->
+
+        <footer>
+
+            <div class="footer-left">
+                CD <span>♡</span>
+            </div>
+
+            <div class="footer-right">
+                made with ♡
+            </div>
+
+        </footer>
 
     </main>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <span>CD ♡</span>
-
-        <span>
-            Made with curiosity & caffeine.
-        </span>
-
-        <span>
-            © 2026
-        </span>
-
-    </footer>
 
 
     <script src="script.js"></script>
