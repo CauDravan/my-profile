@@ -1,194 +1,305 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CD — Personal Website</title>
+    <title>CD ♡</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="#" class="logo">CD<span>♡</span></a>
+    <!-- =========================
+         Navigation
+    ========================== -->
 
-        <div class="nav-links">
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            CD<span>♡</span>
+        </a>
+
+        <nav class="nav-links">
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#art">Art</a>
+            <a href="projects.html">Projects</a>
+            <a href="art.html">Art</a>
             <a href="#contact">Contact</a>
-        </div>
-    </nav>
+        </nav>
+
+    </header>
 
 
-    <!-- Hero -->
     <main>
 
-        <section class="hero">
-            <div class="hero-text">
-                <p class="eyebrow">HELLO, I'M</p>
+        <!-- =========================
+             Hero
+        ========================== -->
 
-                <h1>CD<span>♡</span></h1>
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-small-text">
+                    <span class="dot"></span>
+                    Hello, I'm
+                </div>
+
+                <h1>
+                    CD<span>♡</span>
+                </h1>
+
+                <p class="hero-title">
+                    Game Developer & Artist
+                </p>
 
                 <p class="hero-description">
-                    A student who makes games, draws things,
-                    and occasionally breaks the code.
+                    I like making games, drawing things,
+                    and turning random ideas into little projects.
                 </p>
 
-                <a href="#projects" class="button">
-                    View my projects →
+                <div class="hero-buttons">
+
+                    <a href="projects.html" class="button primary">
+                        View my projects
+                        <span>→</span>
+                    </a>
+
+                    <a href="#about" class="button secondary">
+                        About me
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-decoration">
+                <span>✦</span>
+                <span>♡</span>
+                <span>✦</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             About
+        ========================== -->
+
+        <section id="about" class="about section">
+
+            <div class="section-heading">
+                <span>01</span>
+                <p>ABOUT ME</p>
+            </div>
+
+            <div class="about-layout">
+
+                <h2>
+                    A little bit<br>
+                    about me.
+                </h2>
+
+                <div class="about-text">
+
+                    <p>
+                        Hi! I'm CD, a student who enjoys making
+                        games and drawing in my free time.
+                    </p>
+
+                    <p>
+                        I'm especially interested in game
+                        development, programming, character
+                        design and experimenting with weird ideas.
+                    </p>
+
+                    <p>
+                        Most of my projects start as a simple
+                        thought of <em>"what if I tried this?"</em>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             What I Do
+        ========================== -->
+
+        <section class="interests section">
+
+            <div class="section-heading">
+                <span>02</span>
+                <p>WHAT I DO</p>
+            </div>
+
+            <div class="interest-list">
+
+                <div class="interest-item">
+
+                    <span class="interest-number">01</span>
+
+                    <div>
+                        <h3>Game Development</h3>
+                        <p>
+                            Mostly 2D games and gameplay systems.
+                        </p>
+                    </div>
+
+                    <span class="interest-arrow">↗</span>
+
+                </div>
+
+
+                <div class="interest-item">
+
+                    <span class="interest-number">02</span>
+
+                    <div>
+                        <h3>Programming</h3>
+                        <p>
+                            Making things work, sometimes somehow.
+                        </p>
+                    </div>
+
+                    <span class="interest-arrow">↗</span>
+
+                </div>
+
+
+                <div class="interest-item">
+
+                    <span class="interest-number">03</span>
+
+                    <div>
+                        <h3>Drawing</h3>
+                        <p>
+                            Characters, concepts and whatever
+                            happens to be in my head.
+                        </p>
+                    </div>
+
+                    <span class="interest-arrow">↗</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Featured Links
+        ========================== -->
+
+        <section class="links section">
+
+            <div class="section-heading">
+                <span>03</span>
+                <p>EXPLORE</p>
+            </div>
+
+            <div class="link-grid">
+
+                <a href="projects.html" class="big-link">
+
+                    <div>
+                        <span class="link-label">01 / WORK</span>
+                        <h3>Projects</h3>
+                        <p>
+                            Games, websites and other things
+                            I've made.
+                        </p>
+                    </div>
+
+                    <span class="big-arrow">↗</span>
+
                 </a>
-            </div>
-
-            <div class="hero-image">
-                <img src="assets/avatar.png" alt="CD">
-            </div>
-        </section>
 
 
-        <!-- About -->
-        <section id="about" class="section">
-            <p class="section-label">01 / ABOUT</p>
+                <a href="art.html" class="big-link">
 
-            <h2>A little about me.</h2>
-
-            <div class="about-content">
-                <p>
-                    Hi! I'm CD. I'm a student interested in
-                    game development, programming and digital art.
-                </p>
-
-                <p>
-                    I enjoy creating small games, experimenting
-                    with mechanics and drawing characters in my
-                    free time.
-                </p>
-            </div>
-        </section>
-
-
-        <!-- Projects -->
-        <section id="projects" class="section">
-            <p class="section-label">02 / PROJECTS</p>
-
-            <h2>Things I've made.</h2>
-
-            <div class="project-grid">
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/projects/project-1.png"
-                             alt="Project 1">
-                    </div>
-
-                    <div class="project-info">
-                        <p class="project-type">GAME / GODOT</p>
-
-                        <h3>My Game</h3>
-
+                    <div>
+                        <span class="link-label">02 / DRAWINGS</span>
+                        <h3>Art</h3>
                         <p>
-                            A small 2D game project I've been
-                            working on.
+                            A collection of things I've drawn.
                         </p>
-
-                        <a href="#" target="_blank">
-                            View project ↗
-                        </a>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/projects/project-2.png"
-                             alt="Project 2">
                     </div>
 
-                    <div class="project-info">
-                        <p class="project-type">WEB / JAVASCRIPT</p>
+                    <span class="big-arrow">↗</span>
 
-                        <h3>Another Project</h3>
-
-                        <p>
-                            A small web project made for fun
-                            and experimentation.
-                        </p>
-
-                        <a href="#" target="_blank">
-                            View project ↗
-                        </a>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/projects/project-3.png"
-                             alt="Project 3">
-                    </div>
-
-                    <div class="project-info">
-                        <p class="project-type">OTHER</p>
-
-                        <h3>Something Else</h3>
-
-                        <p>
-                            Another little thing I made.
-                        </p>
-
-                        <a href="#" target="_blank">
-                            View project ↗
-                        </a>
-                    </div>
-                </article>
+                </a>
 
             </div>
+
         </section>
 
 
-        <!-- Art -->
-        <section id="art" class="section">
-            <p class="section-label">03 / ART</p>
+        <!-- =========================
+             Contact
+        ========================== -->
 
-            <h2>Things I've drawn.</h2>
+        <section id="contact" class="contact section">
 
-            <div class="art-grid">
-                <img src="assets/art/art-1.png" alt="Artwork">
-                <img src="assets/art/art-2.png" alt="Artwork">
-                <img src="assets/art/art-3.png" alt="Artwork">
-                <img src="assets/art/art-4.png" alt="Artwork">
+            <div class="section-heading">
+                <span>04</span>
+                <p>CONTACT</p>
             </div>
-        </section>
 
+            <div class="contact-content">
 
-        <!-- Contact -->
-        <section id="contact" class="section contact">
-            <p class="section-label">04 / CONTACT</p>
+                <h2>
+                    Let's say<br>
+                    hi. <span>♡</span>
+                </h2>
 
-            <h2>Let's say hi.</h2>
+                <div class="contact-links">
 
-            <p>
-                You can find me around the internet here:
-            </p>
+                    <a href="#" target="_blank">
+                        <span>GitHub</span>
+                        <span>↗</span>
+                    </a>
 
-            <div class="social-links">
-                <a href="#" target="_blank">GitHub ↗</a>
-                <a href="#" target="_blank">Twitter ↗</a>
-                <a href="#" target="_blank">Email ↗</a>
+                    <a href="mailto:your@email.com">
+                        <span>Email</span>
+                        <span>↗</span>
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <span>Other</span>
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
             </div>
+
         </section>
 
     </main>
 
 
-    <!-- Footer -->
+    <!-- =========================
+         Footer
+    ========================== -->
+
     <footer>
-        <p>Made with ♡ by CD</p>
-        <p>© 2026 CD</p>
+
+        <span>CD ♡</span>
+
+        <span>
+            Made with curiosity & caffeine.
+        </span>
+
+        <span>
+            © 2026
+        </span>
+
     </footer>
 
 
@@ -196,4 +307,3 @@
 
 </body>
 </html>
-```
