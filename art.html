@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Art — CD ♡</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            CD <span>♡</span>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="projects.html">
+                <span class="nav-number">01</span>
+                Projects
+            </a>
+
+            <a href="art.html" class="active">
+                <span class="nav-number">02</span>
+                Art
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- PAGE HEADER -->
+
+        <section class="listing-header">
+
+            <div class="listing-number">
+                02
+            </div>
+
+            <div>
+
+                <p class="section-label">
+                    THINGS I DRAW
+                </p>
+
+                <h1>
+                    Art
+                </h1>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+                </svg>
+
+                <input
+                    type="text"
+                    id="artSearch"
+                    placeholder="Search art..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ART CARDS -->
+
+        <section class="cards-section">
+
+            <div class="cards-grid" id="artGrid">
+
+
+                <!-- ART 01 -->
+
+                <a
+                    href="art/my-art-01.html"
+                    class="art-card"
+                    data-search="character illustration girl"
+                >
+
+                    <div class="art-image">
+
+                        <img
+                            src="assets/art/art-01.png"
+                            alt="Artwork 01"
+                        >
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span class="card-number">
+                            01
+                        </span>
+
+                        <h2>
+                            Artwork 01
+                        </h2>
+
+                        <p>
+                            Illustration
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ART 02 -->
+
+                <a
+                    href="art/my-art-02.html"
+                    class="art-card"
+                    data-search="character drawing illustration"
+                >
+
+                    <div class="art-image">
+
+                        <img
+                            src="assets/art/art-02.png"
+                            alt="Artwork 02"
+                        >
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span class="card-number">
+                            02
+                        </span>
+
+                        <h2>
+                            Artwork 02
+                        </h2>
+
+                        <p>
+                            Illustration
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ART 03 -->
+
+                <a
+                    href="art/my-art-03.html"
+                    class="art-card"
+                    data-search="character sketch drawing"
+                >
+
+                    <div class="art-image">
+
+                        <img
+                            src="assets/art/art-03.png"
+                            alt="Artwork 03"
+                        >
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span class="card-number">
+                            03
+                        </span>
+
+                        <h2>
+                            Artwork 03
+                        </h2>
+
+                        <p>
+                            Sketch
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+
+            <p id="noArt" class="no-results">
+                Nothing found ♡
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-left">
+            CD <span>♡</span>
+        </div>
+
+        <div class="footer-right">
+            made with ♡
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

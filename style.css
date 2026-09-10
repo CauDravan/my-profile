@@ -837,3 +837,344 @@ footer {
 .navbar.scrolled {
     box-shadow: 0 5px 20px rgba(80, 40, 50, 0.06);
 }
+
+/* =========================================================
+   LISTING PAGES
+   PROJECTS / ART
+========================================================= */
+
+.listing-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+
+    padding: 100px 8vw 55px;
+}
+
+.listing-number {
+    font-size: 18px;
+
+    color: var(--pink);
+
+    font-weight: 700;
+
+    padding-top: 8px;
+}
+
+.listing-number::after {
+    content: "";
+
+    display: inline-block;
+
+    width: 60px;
+    height: 1px;
+
+    margin-left: 12px;
+
+    vertical-align: middle;
+
+    background: var(--pink);
+}
+
+.listing-header h1 {
+    font-size: clamp(65px, 9vw, 120px);
+
+    line-height: 0.85;
+
+    letter-spacing: -6px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-section {
+    padding: 0 8vw 55px;
+}
+
+.search-box {
+    position: relative;
+
+    max-width: 700px;
+}
+
+.search-box svg {
+    position: absolute;
+
+    left: 18px;
+    top: 50%;
+
+    width: 20px;
+    height: 20px;
+
+    transform: translateY(-50%);
+
+    color: var(--pink);
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 17px 20px 17px 52px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 999px;
+
+    outline: none;
+
+    background: var(--pink-light);
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    transition: 0.2s ease;
+}
+
+.search-box input::placeholder {
+    color: var(--muted);
+}
+
+.search-box input:focus {
+    border-color: var(--pink);
+
+    background: white;
+
+    box-shadow: 4px 4px 0 var(--pink-soft);
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cards-section {
+    padding: 0 8vw 120px;
+}
+
+.cards-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Project / Art card */
+
+.project-card,
+.art-card {
+    display: block;
+
+    background: white;
+
+    border: 2px solid var(--text);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 5px 5px 0 var(--pink-soft);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-card:hover,
+.art-card:hover {
+    transform: translate(4px, 4px);
+
+    box-shadow: 1px 1px 0 var(--pink);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.card-image {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: var(--pink-light);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .card-image img {
+    transform: scale(1.04);
+}
+
+
+/* Art */
+
+.art-image {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: var(--pink-light);
+}
+
+.art-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.art-card:hover .art-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   CARD INFO
+========================================================= */
+
+.card-info {
+    position: relative;
+
+    padding: 20px 20px 22px;
+}
+
+.card-number {
+    display: block;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: var(--pink);
+
+    margin-bottom: 5px;
+}
+
+.card-info h2 {
+    font-size: 23px;
+
+    line-height: 1.1;
+
+    margin-bottom: 6px;
+}
+
+.card-info p {
+    font-size: 13px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   ACTIVE NAV
+========================================================= */
+
+.nav-links a.active {
+    color: var(--pink-dark);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   NO RESULTS
+========================================================= */
+
+.no-results {
+    display: none;
+
+    padding: 70px 0;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+.no-results.show {
+    display: block;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .listing-header {
+        padding: 70px 22px 40px;
+
+        gap: 18px;
+    }
+
+    .listing-number {
+        font-size: 14px;
+    }
+
+    .listing-number::after {
+        width: 30px;
+    }
+
+    .listing-header h1 {
+        font-size: 65px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .search-section {
+        padding: 0 22px 40px;
+    }
+
+
+    .cards-section {
+        padding: 0 22px 80px;
+    }
+
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+}

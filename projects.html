@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects — CD ♡</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            CD <span>♡</span>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="projects.html" class="active">
+                <span class="nav-number">01</span>
+                Projects
+            </a>
+
+            <a href="art.html">
+                <span class="nav-number">02</span>
+                Art
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- PAGE HEADER -->
+
+        <section class="listing-header">
+
+            <div class="listing-number">
+                01
+            </div>
+
+            <div>
+                <p class="section-label">
+                    THINGS I MAKE
+                </p>
+
+                <h1>
+                    Projects
+                </h1>
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+                </svg>
+
+                <input
+                    type="text"
+                    id="projectSearch"
+                    placeholder="Search projects..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT CARDS -->
+
+        <section class="cards-section">
+
+            <div class="cards-grid" id="projectGrid">
+
+
+                <!-- PROJECT 01 -->
+
+                <a
+                    href="projects/my-game.html"
+                    class="project-card"
+                    data-search="my game godot horror game"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="assets/projects/my-game.png"
+                            alt="My Game"
+                        >
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span class="card-number">
+                            01
+                        </span>
+
+                        <h2>
+                            My Game
+                        </h2>
+
+                        <p>
+                            Game / Godot
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT 02 -->
+
+                <a
+                    href="projects/ghost-project.html"
+                    class="project-card"
+                    data-search="ghost project godot horror ghost"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="assets/projects/ghost-project.png"
+                            alt="Ghost Project"
+                        >
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span class="card-number">
+                            02
+                        </span>
+
+                        <h2>
+                            Ghost Project
+                        </h2>
+
+                        <p>
+                            Game / Godot
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT 03 -->
+
+                <a
+                    href="projects/pickleball.html"
+                    class="project-card"
+                    data-search="pickleball management website"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="assets/projects/pickleball.png"
+                            alt="Pickleball"
+                        >
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span class="card-number">
+                            03
+                        </span>
+
+                        <h2>
+                            Pickleball
+                        </h2>
+
+                        <p>
+                            Website / Management
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT 04 -->
+
+                <a
+                    href="projects/another-project.html"
+                    class="project-card"
+                    data-search="another project experiment"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="assets/projects/another-project.png"
+                            alt="Another Project"
+                        >
+
+                    </div>
+
+                    <div class="card-info">
+
+                        <span class="card-number">
+                            04
+                        </span>
+
+                        <h2>
+                            Another Project
+                        </h2>
+
+                        <p>
+                            Experiment
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+
+            <!-- NO RESULT -->
+
+            <p id="noProjects" class="no-results">
+                Nothing found ♡
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-left">
+            CD <span>♡</span>
+        </div>
+
+        <div class="footer-right">
+            made with ♡
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
