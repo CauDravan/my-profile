@@ -8,223 +8,310 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (navbar) {
         window.addEventListener("scroll", () => {
-
-            if (window.scrollY > 10) {
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
-
+            navbar.classList.toggle(
+                "scrolled",
+                window.scrollY > 10
+            );
         });
     }
 
 
     /* =====================================================
-       PROJECT SEARCH
+       PROJECTS
     ===================================================== */
 
-    const projectSearch = document.getElementById("projectSearch");
-
-    if (projectSearch) {
-
-        const cards = document.querySelectorAll(".project-card");
-        const noProjects = document.getElementById("noProjects");
-
-        projectSearch.addEventListener("input", () => {
-
-            const query = projectSearch.value
-                .toLowerCase()
-                .trim();
-
-            let visibleCards = 0;
-
-            cards.forEach(card => {
-
-                const searchData =
-                    card.dataset.search.toLowerCase();
-
-                if (searchData.includes(query)) {
-
-                    card.style.display = "";
-
-                    visibleCards++;
-
-                } else {
-
-                    card.style.display = "none";
-
-                }
-
-            });
-
-
-            if (visibleCards === 0) {
-                noProjects.classList.add("show");
-            } else {
-                noProjects.classList.remove("show");
-            }
-
-        });
-
-    }
+    loadProjects();
 
 
     /* =====================================================
-       ART SEARCH
+       ART
     ===================================================== */
 
-    const artSearch = document.getElementById("artSearch");
-
-    if (artSearch) {
-
-        const cards = document.querySelectorAll(".art-card");
-        const noArt = document.getElementById("noArt");
-
-        artSearch.addEventListener("input", () => {
-
-            const query = artSearch.value
-                .toLowerCase()
-                .trim();
-
-            let visibleCards = 0;
-
-            cards.forEach(card => {
-
-                const searchData =
-                    card.dataset.search.toLowerCase();
-
-                if (searchData.includes(query)) {
-
-                    card.style.display = "";
-
-                    visibleCards++;
-
-                } else {
-
-                    card.style.display = "none";
-
-                }
-
-            });
-
-
-            if (visibleCards === 0) {
-                noArt.classList.add("show");
-            } else {
-                noArt.classList.remove("show");
-            }
-
-        });
-
-    }
+    loadArt();
 
 });
 
-async function loadProjects() {
 
-    const response = await fetch("data/projects.json");
-    const projects = await response.json();
+/* =========================================================
+   LOAD PROJECTS
+========================================================= */
+
+async function loadProjects() {
 
     const grid = document.getElementById("projectGrid");
 
     if (!grid) return;
 
-    projects.forEach((project, index) => {
+    try {
 
-        const number = String(index + 1).padStart(2, "0");
+        const response = await fetch("data/projects.json");
 
-        const card = document.createElement("a");
+        if (!response.ok) {
+            throw new Error("Failed to load projects.json");
+        }
 
-        card.href = project.url;
+        const projects = await response.json();
 
-        card.className = "project-card";
+        projects.forEach((project, index) => {
 
-        card.style.setProperty(
-            "--project-color",
-            project.color
-        );
+            const number = String(index + 1).padStart(2, "0");
 
-        card.dataset.search = project.tags;
+            const card = document.createElement("a");
 
-        card.innerHTML = `
-            <div class="card-image">
-                <img
-                    src="${project.image}"
-                    alt="${project.title}"
-                    loading="lazy"
-                >
-            </div>
+            card.href = project.url;
+            card.className = "project-card";
 
-            <div class="card-info">
+            card.style.setProperty(
+                "--project-color",
+                project.color || "#ff7fa8"
+            );
 
-                <span class="card-number">
-                    ${number}
-                </span>
+            card.dataset.search = [
+                project.title,
+                project.description,
+                project.tags,
+                project.status
+            ]
+                .filter(Boolean)
+                .join(" ")
+                .toLowerCase();
 
-                <h2>
-                    ${project.title}
-                </h2>
 
-                <p>
-                    ${project.description}
-                </p>
+            card.innerHTML = `
+                <div class="card-image">
+                    <img
+                        src="${project.image}"
+                        alt="${project.title}"
+                        loading="lazy"
+                    >
+                </div>
 
-            </div>
-        `;
+                <div class="card-info">
 
-        grid.appendChild(card);
+                    <div class="card-topline">
 
-    });
+                        <span class="card-number">
+                            ${number}
+                        </span>
+
+                        ${
+                            project.status
+                                ? `<span class="card-status">
+                                    ${project.status}
+                                   </span>`
+                                : ""
+                        }
+
+                    </div>
+
+                    <h2>
+                        ${project.title}
+                    </h2>
+
+                    <p>
+                        ${project.description || ""}
+                    </p>
+
+                    ${
+                        project.tags
+                            ? `<div class="card-tags">
+                                ${project.tags}
+                               </div>`
+                            : ""
+                    }
+
+                </div>
+            `;
+
+            grid.appendChild(card);
+
+        });
+
+
+        setupProjectSearch();
+
+    } catch (error) {
+
+        console.error("Project loading error:", error);
+
+    }
 }
 
-async function loadArt() {
 
-    const response = await fetch("data/art.json");
-    const artworks = await response.json();
+/* =========================================================
+   PROJECT SEARCH
+========================================================= */
+
+function setupProjectSearch() {
+
+    const search = document.getElementById("projectSearch");
+    const grid = document.getElementById("projectGrid");
+    const noResults = document.getElementById("noProjects");
+
+    if (!search || !grid) return;
+
+    const cards = grid.querySelectorAll(".project-card");
+
+    search.addEventListener("input", () => {
+
+        const query = search.value
+            .toLowerCase()
+            .trim();
+
+        let visible = 0;
+
+        cards.forEach(card => {
+
+            const data = card.dataset.search || "";
+
+            const match = data.includes(query);
+
+            card.style.display = match ? "" : "none";
+
+            if (match) {
+                visible++;
+            }
+
+        });
+
+        if (noResults) {
+            noResults.classList.toggle(
+                "show",
+                visible === 0
+            );
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   LOAD ART
+========================================================= */
+
+async function loadArt() {
 
     const grid = document.getElementById("artGrid");
 
     if (!grid) return;
 
-    artworks.forEach((art, index) => {
+    try {
 
-        const number = String(index + 1).padStart(2, "0");
+        const response = await fetch("data/arts.json");
 
-        const item = document.createElement("a");
+        if (!response.ok) {
+            throw new Error("Failed to load arts.json");
+        }
 
-        item.href = art.url;
+        const artworks = await response.json();
 
-        item.className = "art-item";
+        artworks.forEach((art, index) => {
 
-        item.dataset.search = art.tags;
+            const number = String(index + 1).padStart(2, "0");
 
-        item.innerHTML = `
-            <img
-                src="${art.image}"
-                alt="${art.title}"
-                loading="lazy"
-            >
+            const item = document.createElement("a");
 
-            <div class="art-overlay">
+            item.href = art.url;
+            item.className = "art-item";
 
-                <span>${number}</span>
+            item.dataset.search = [
+                art.title,
+                art.tags
+            ]
+                .filter(Boolean)
+                .join(" ")
+                .toLowerCase();
 
-                <div>
-                    <strong>
-                        ${art.title}
-                    </strong>
 
-                    <small>
-                        Artwork
-                    </small>
+            item.innerHTML = `
+                <img
+                    src="${art.image}"
+                    alt="${art.title}"
+                    loading="lazy"
+                >
+
+                <div class="art-overlay">
+
+                    <span>
+                        ${number}
+                    </span>
+
+                    <div>
+                        <strong>
+                            ${art.title}
+                        </strong>
+
+                        <small>
+                            Artwork
+                        </small>
+                    </div>
+
+                    <span>
+                        ↗
+                    </span>
+
                 </div>
+            `;
 
-                <span>↗</span>
+            grid.appendChild(item);
 
-            </div>
-        `;
+        });
 
-        grid.appendChild(item);
+
+        setupArtSearch();
+
+    } catch (error) {
+
+        console.error("Art loading error:", error);
+
+    }
+}
+
+
+/* =========================================================
+   ART SEARCH
+========================================================= */
+
+function setupArtSearch() {
+
+    const search = document.getElementById("artSearch");
+    const grid = document.getElementById("artGrid");
+    const noResults = document.getElementById("noArt");
+
+    if (!search || !grid) return;
+
+    const items = grid.querySelectorAll(".art-item");
+
+    search.addEventListener("input", () => {
+
+        const query = search.value
+            .toLowerCase()
+            .trim();
+
+        let visible = 0;
+
+        items.forEach(item => {
+
+            const data = item.dataset.search || "";
+
+            const match = data.includes(query);
+
+            item.style.display = match ? "" : "none";
+
+            if (match) {
+                visible++;
+            }
+
+        });
+
+        if (noResults) {
+            noResults.classList.toggle(
+                "show",
+                visible === 0
+            );
+        }
 
     });
+
 }
