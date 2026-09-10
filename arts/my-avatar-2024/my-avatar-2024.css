@@ -1,0 +1,181 @@
+/* =========================================================
+   ART DETAIL
+========================================================= */
+
+.art-detail-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+
+    padding: 100px 8vw 70px;
+}
+
+.art-detail-number {
+    font-size: 18px;
+    color: var(--pink);
+    font-weight: 700;
+    padding-top: 8px;
+}
+
+.art-detail-number::after {
+    content: "";
+
+    display: inline-block;
+
+    width: 60px;
+    height: 1px;
+
+    margin-left: 12px;
+    vertical-align: middle;
+
+    background: var(--pink);
+}
+
+.art-detail-heading h1 {
+    font-size: clamp(65px, 9vw, 120px);
+    line-height: 0.85;
+    letter-spacing: -6px;
+}
+
+.art-detail-heading h1 span {
+    color: var(--pink);
+}
+
+.art-detail-description {
+    max-width: 500px;
+
+    margin-top: 30px;
+
+    font-size: 17px;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.art-detail-image {
+    padding: 0 8vw 80px;
+}
+
+.art-frame {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    background: var(--pink-light);
+
+    border: 2px solid var(--text);
+    border-radius: 20px;
+
+    box-shadow: 7px 7px 0 var(--pink);
+}
+
+.art-frame img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.art-detail-info {
+    display: flex;
+    gap: 80px;
+
+    padding: 50px 8vw;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    background: #fff7fa;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: var(--pink);
+}
+
+.info-block strong {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   BACK
+========================================================= */
+
+.art-detail-back {
+    padding: 70px 8vw 120px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .art-detail-header {
+        padding: 70px 22px 45px;
+        gap: 18px;
+    }
+
+    .art-detail-number {
+        font-size: 14px;
+    }
+
+    .art-detail-number::after {
+        width: 30px;
+    }
+
+    .art-detail-heading h1 {
+        font-size: 65px;
+        letter-spacing: -4px;
+    }
+
+    .art-detail-description {
+        font-size: 15px;
+    }
+
+    .art-detail-image {
+        padding: 0 22px 55px;
+    }
+
+    .art-frame {
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 0 var(--pink);
+    }
+
+    .art-detail-info {
+        flex-direction: column;
+        gap: 25px;
+
+        padding: 40px 22px;
+    }
+
+    .art-detail-back {
+        padding: 50px 22px 80px;
+    }
+
+}
