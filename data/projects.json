@@ -1,11 +1,11 @@
 [
     {
         "title": "ADOFAI Charts",
-        "description": "Game / Godot",
+        "description": "ADOFAI / Charting",
         "image": "assets/projects/adofai_charts.png",
         "url": "projects/adofai-charts.html",
         "color": "#000000",
-        "tags": "game, discovery, design",
+        "tags": "adofai, rhythm game, charting, random",
         "status": "In Progress"
     }
 ]
