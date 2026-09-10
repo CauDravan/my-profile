@@ -1,0 +1,450 @@
+```css
+/* =========================
+   Base
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #faf9f7;
+    color: #242424;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+.navbar {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 28px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    margin-left: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: #666;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #242424;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    max-width: 1100px;
+    min-height: 75vh;
+
+    margin: auto;
+    padding: 80px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 560px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #888;
+
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(64px, 10vw, 120px);
+    line-height: 0.9;
+    letter-spacing: -7px;
+
+    margin-bottom: 32px;
+}
+
+.hero h1 span {
+    font-size: 0.5em;
+    letter-spacing: 0;
+}
+
+.hero-description {
+    max-width: 430px;
+
+    color: #666;
+    font-size: 18px;
+
+    margin-bottom: 32px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border: 1px solid #242424;
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.button:hover {
+    background: #242424;
+    color: white;
+}
+
+.hero-image {
+    width: 280px;
+    height: 280px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+    border-radius: 50%;
+
+    border: 1px solid #ddd;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+.section {
+    max-width: 1100px;
+
+    margin: auto;
+    padding: 110px 24px;
+}
+
+.section-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #999;
+
+    margin-bottom: 14px;
+}
+
+.section h2 {
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   About
+========================= */
+
+.about-content {
+    max-width: 650px;
+
+    font-size: 20px;
+    color: #666;
+}
+
+.about-content p + p {
+    margin-top: 20px;
+}
+
+
+/* =========================
+   Projects
+========================= */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: white;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.project-image {
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: #eee;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.03);
+}
+
+.project-info {
+    padding: 22px;
+}
+
+.project-type {
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #999;
+
+    margin-bottom: 8px;
+}
+
+.project-info h3 {
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.project-info > p:not(.project-type) {
+    font-size: 14px;
+    color: #777;
+
+    margin-bottom: 18px;
+}
+
+.project-info a {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   Art
+========================= */
+
+.art-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+.art-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    background: #eee;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.art-grid img:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+
+/* =========================
+   Contact
+========================= */
+
+.contact {
+    padding-bottom: 150px;
+}
+
+.contact > p:not(.section-label) {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    font-size: 15px;
+
+    border-bottom: 1px solid #aaa;
+
+    padding-bottom: 3px;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #888;
+    border-color: #242424;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 24px;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        padding: 22px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 60px;
+        padding-bottom: 100px;
+
+        flex-direction: column-reverse;
+
+        align-items: flex-start;
+    }
+
+    .hero-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+
+    .section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .art-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    footer {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+```
