@@ -724,3 +724,247 @@ footer {
         width: 90%;
     }
 }
+
+/* =========================================================
+   BRAND COLORS
+========================================================= */
+
+.github-card {
+    --brand: #24292f;
+    --brand-light: #f1f3f5;
+}
+
+.sheets-card {
+    --brand: #34a853;
+    --brand-light: #e8f5e9;
+}
+
+.itch-card {
+    --brand: #fa5c5c;
+    --brand-light: #fff0f0;
+}
+
+.pixiv-card {
+    --brand: #0096fa;
+    --brand-light: #eaf7ff;
+}
+
+.youtube-card {
+    --brand: #ff0000;
+    --brand-light: #fff0f0;
+}
+
+.facebook-card {
+    --brand: #1877f2;
+    --brand-light: #edf4ff;
+}
+
+.steam-card {
+    --brand: #1b2838;
+    --brand-light: #edf1f5;
+}
+
+.discord-card {
+    --brand: #5865f2;
+    --brand-light: #eef0ff;
+}
+
+.twitch-card {
+    --brand: #9146ff;
+    --brand-light: #f4edff;
+}
+
+
+/* =========================================================
+   WORK CARDS
+========================================================= */
+
+.work-card {
+    position: relative;
+}
+
+.work-card .work-icon {
+    background: var(--brand-light);
+    color: var(--brand);
+}
+
+.work-card:hover {
+    border-color: var(--brand);
+}
+
+.work-card .work-number {
+    color: var(--brand);
+}
+
+.work-card .work-arrow {
+    color: var(--brand);
+}
+
+
+/* GitHub */
+
+.github-card .work-icon {
+    background: #f0f0f0;
+    color: #24292f;
+}
+
+
+/* Google Sheets */
+
+.sheets-card .work-icon {
+    background: #e8f5e9;
+    color: #34a853;
+}
+
+
+/* itch.io */
+
+.itch-card .work-icon {
+    background: #fff0f0;
+    color: #fa5c5c;
+}
+
+.itch-icon {
+    font-weight: 900;
+    letter-spacing: -0.08em;
+}
+
+.itch-icon span {
+    font-size: 0.85rem;
+    font-weight: 900;
+}
+
+
+/* Work title + tag */
+
+.work-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.work-tag {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 3px 8px;
+
+    border-radius: 999px;
+
+    background: #fff0f0;
+    color: #fa5c5c;
+
+    font-size: 0.55rem;
+    font-weight: 900;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   SOCIAL CARDS
+========================================================= */
+
+.social-card {
+    position: relative;
+}
+
+.social-card .social-icon {
+    background: var(--brand-light);
+    color: var(--brand);
+}
+
+.social-card:hover {
+    border-color: var(--brand);
+}
+
+.social-card .social-number {
+    color: var(--brand);
+}
+
+.social-card .social-arrow {
+    color: var(--brand);
+}
+
+
+/* =========================================================
+   PIXIV
+========================================================= */
+
+.pixiv-symbol {
+    font-family: Arial, sans-serif;
+
+    font-size: 1.35rem;
+    font-weight: 900;
+
+    letter-spacing: -0.08em;
+}
+
+
+/* =========================================================
+   FACEBOOK
+========================================================= */
+
+.facebook-symbol {
+    font-family: Arial, sans-serif;
+
+    font-size: 1.8rem;
+    font-weight: 900;
+
+    line-height: 1;
+
+    transform: translateY(3px);
+}
+
+
+/* =========================================================
+   STEAM
+========================================================= */
+
+.steam-symbol {
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   DISCORD
+========================================================= */
+
+.discord-symbol {
+    font-size: 1.45rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   TWITCH
+========================================================= */
+
+.twitch-symbol {
+    font-family: Arial, sans-serif;
+
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   MOBILE SOCIAL GRID
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .social-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+
+}

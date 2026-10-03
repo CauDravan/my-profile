@@ -1,12 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /*
-     * Smooth navigation
-     *
-     * The website is intentionally kept simple.
-     * Most navigation is handled directly by HTML anchors.
-     */
-
     const navLinks = document.querySelectorAll(".nav-links a");
 
     navLinks.forEach(link => {
